@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const ObjectId = require('mongodb').ObjectId;
 
-const port = process.env.PORT || 5080
+const port = 5080
 
 const app = express();
 app.use(cors());
@@ -65,4 +65,4 @@ client.connect(err => {
 });
 
 
-app.listen(port)
+app.listen( process.env.PORT || port)
